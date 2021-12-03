@@ -10,11 +10,11 @@ TASKS_CLIENT = tasks_v2.CloudTasksClient()
 
 TABLES = [
     "AdsInsights",
-    # "VideoInsights",
-    # "AgeGenderInsights",
-    # "RegionInsights",
-    # "DeviceInsights",
-    # "PlatformPositionInsights",
+    "VideoInsights",
+    "AgeGenderInsights",
+    "RegionInsights",
+    "DeviceInsights",
+    "PlatformPositionInsights",
 ]
 
 ACCOUNTS = [
