@@ -2,11 +2,17 @@ from models.AdsInsights.base import ads_insights_pipeline
 
 RegionInsights = ads_insights_pipeline(
     request_options={
-        "level": "account",
+        "level": "ad",
         "fields": [
             "date_start",
             "date_stop",
             "account_id",
+            "campaign_id",
+            "adset_id",
+            "ad_id",
+            "campaign_name",
+            "adset_name",
+            "ad_name",
             "reach",
             "impressions",
             "cpc",
@@ -23,6 +29,12 @@ RegionInsights = ads_insights_pipeline(
     transform=lambda rows: [
         {
             "account_id": row["account_id"],
+            "campaign_id": row["campaign_id"],
+            "adset_id": row["adset_id"],
+            "ad_id": row["ad_id"],
+            "campaign_name": row["campaign_name"],
+            "adset_name": row["adset_name"],
+            "ad_name": row["ad_name"],
             "date_start": row["date_start"],
             "date_stop": row["date_stop"],
             "region": row["region"],
@@ -91,6 +103,12 @@ RegionInsights = ads_insights_pipeline(
         "name": "RegionInsights",
         "schema": [
             {"name": "account_id", "type": "INTEGER"},
+            {"name": "campaign_id", "type": "NUMERIC"},
+            {"name": "adset_id", "type": "NUMERIC"},
+            {"name": "ad_id", "type": "NUMERIC"},
+            {"name": "campaign_name", "type": "STRING"},
+            {"name": "adset_name", "type": "STRING"},
+            {"name": "ad_name", "type": "STRING"},
             {"name": "date_start", "type": "DATE"},
             {"name": "date_stop", "type": "DATE"},
             {"name": "region", "type": "STRING"},
