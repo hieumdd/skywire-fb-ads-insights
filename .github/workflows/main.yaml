@@ -35,7 +35,7 @@ jobs:
         run: |
           echo "FUNCTION_NAME=skywire-fb-ads-insights" >> $GITHUB_ENV
           echo "PUBLIC_URL=https://us-central1-umberto-gianni.cloudfunctions.net/skywire-fb-ads-insights" >> $GITHUB_ENV
-          echo "DATASET=_Facebook" >> $GITHUB_ENV
+          echo "DATASET=Facebook" >> $GITHUB_ENV
 
       - name: Deploy to Cloud Functions
         run: >-
